@@ -6,6 +6,9 @@
     
        
 MSG1 DB 'ENTER AN INPUT: $'
+MSG2 DB '   POSITIVE $ '
+MSG3 DB '   ZERO $ '  
+MSG4 DB '   NEGATIVE $ '
 
  
 
@@ -30,7 +33,12 @@ MAIN PROC
     INT 21H
     MOV CL,AL 
     SUB CL,48 
-   
+    
+    
+    MOV DL, 0AH 
+    MOV AH,2
+    INT 21H
+     
     
         
           CMP CL,1
