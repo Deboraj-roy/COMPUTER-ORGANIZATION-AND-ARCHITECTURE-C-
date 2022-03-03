@@ -21,7 +21,9 @@ MAIN PROC
     MOV DL,BL
     INT 21H
     
-    MOV AH,4CH
+    MOV AH,4CH  ; course code 00984
     INT 21H
 MAIN ENDP
     END MAIN
+    
+    
