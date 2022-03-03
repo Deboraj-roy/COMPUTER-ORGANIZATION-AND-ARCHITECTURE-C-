@@ -4,18 +4,8 @@
     CR EQU '0DH'
     LF EQU '0AH'
     
-       
 MSG1 DB 'ENTER AN INPUT: $'
-MSG2 DB '   POSITIVE $ '
-MSG3 DB '   ZERO $ '  
-MSG4 DB '   NEGATIVE $ '
-
- 
-
 .CODE
-
- 
-
 MAIN PROC
         
     MOV AX,@DATA 
