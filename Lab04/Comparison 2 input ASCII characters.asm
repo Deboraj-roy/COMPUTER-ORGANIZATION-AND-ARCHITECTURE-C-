@@ -5,7 +5,7 @@
     LF EQU '0AH'                       
     MSG1 DB 'ENTER FIRST CHARACTER: $'
     MSG2 DB CR,LF, 'ENTER SECOND CHARACTER: $'
-    MSG1 DB CR,LF, 'FIRST ASCII CHARACTER: $'
+    MSG3 DB CR,LF, 'FIRST ASCII CHARACTER: $'
     
  
 
