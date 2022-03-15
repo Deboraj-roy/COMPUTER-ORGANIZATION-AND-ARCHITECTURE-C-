@@ -1,8 +1,8 @@
 .MODEL SMALL
 .STACK 100H
 .DATA
-    CR EQU '0DH'
-    LF EQU '0AH'                       
+    CR EQU 0DH
+    LF EQU 0AH                       
     MSG1 DB 'ENTER FIRST CHARACTER: $'
     MSG2 DB CR,LF, 'ENTER SECOND CHARACTER: $'
     MSG3 DB CR,LF, 'FIRST ASCII CHARACTER: $'
@@ -18,7 +18,9 @@ MAIN PROC
               
     LEA DX,MSG1
     MOV AH,9H 
-    INT 21H  
+    INT 21H 
+    
+     
     MOV AH,1H
     INT 21H
     MOV BL,AL
@@ -27,18 +29,27 @@ MAIN PROC
     LEA DX,MSG2
     MOV AH,9H 
     INT 21H  
+    
+    
     MOV AH,1H
     INT 21H
     MOV CL,AL
     
+        
+    LEA DX,MSG3
+    MOV AH,9H 
+    INT 21H
+    
     
     
     MOV AH,2H
-    
-    CMP AL,BL
+    CMP CL,BL
     JNBE ELSE
     
     MOV DL,CL
+
+    
+    
     JMP DISPLAY
     
     
